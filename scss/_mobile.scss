@@ -41,13 +41,17 @@
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
     }
+    .about-info {
+        grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+        grid-template-columns: 1fr;
+    }
 }
 
 /* SMARTPHONES */
 
 @include mediaSM {
-    main#home h1 {
+    main h1 {
         margin-top: 10vh;
-        font-size: 3.8rem;
+        font-size: 3.5rem !important;
     }
 }

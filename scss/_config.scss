@@ -27,6 +27,17 @@ $background-opacity: 0.9;
     }
 }
 
+/* MANAGING THEMES */
+
+@function set-text-color($color) {
+    @if(lightness($color) > 40) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
 /* MEDIA QUERIES */
 
 @mixin mediaSM {
