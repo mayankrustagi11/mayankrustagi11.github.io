@@ -1,10 +1,18 @@
 /* WIDE SCREENS */
 
-@include mediaXL {}
+@include mediaXL {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 /* DESKTOPS AND LAPTOPS */
 
-@include mediaLG {}
+@include mediaLG {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /* TABLETS */
 
@@ -45,6 +53,9 @@
         grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
         grid-template-columns: 1fr;
     }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* SMARTPHONES */
@@ -53,5 +64,8 @@
     main h1 {
         margin-top: 10vh;
         font-size: 3.5rem !important;
+    }
+    .projects {
+        grid-template-columns: 1fr;
     }
 }
