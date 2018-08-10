@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/timelify.css">
 </head>
 
 <body>
@@ -96,6 +98,31 @@
                 <div class="bar advance" title="Advance" data-skill="Internet Of Things"></div>
             </div>
         </div>
+
+        <div class="timeline">
+            <h2>2013</h2>
+            <ul class="timeline-items">
+                <li class="is-hidden timeline-item">
+                    <h3>Title</h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate, delectus deserunt doloribus
+                        earum eveniet explicabo fuga iste magni maxime mollitia nemo neque, perferendis quod reprehenderit
+                        ut, vel veritatis voluptas?</p>
+                    <hr>
+                </li>
+            </ul>
+            <h2>2014</h2>
+            <ul class="timeline-items">
+                <li class="is-hidden timeline-item">
+                    <h3>Title</h3>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aspernatur consequuntur culpa
+                        deserunt ea esse est inventore, ipsa laborum officia, quam quia quidem, rem sunt tempora tenetur
+                        ullam voluptatem.</p>
+                    <hr>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <footer id="main-footer">
@@ -103,6 +130,15 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.timelify.js"></script>
+    <script>
+        $('.timeline').timelify({
+            animRight: "fadeInRight",
+            animCenter: "zoomIn"
+        })
+    </script>
 </body>
 
 </html>
