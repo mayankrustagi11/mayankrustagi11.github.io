@@ -47,18 +47,24 @@
         </h1>
         <h2 class="sm-heading">This is how you can reach me...</h2>
 
-        <div class="boxes">
-            <div>
-                <span class="text-secondary">Email: </span>mayankrustagi11@gmail.com
-            </div>
-
-            <div>
-                <span class="text-secondary">Phone: </span>91-0000000000
-            </div>
-
-            <div>
-                <span class="text-secondary">Twitter: </span>@mayankrustagi11
-            </div>
+        <div class="contact-form">
+            <form action="https://formspree.io/mayankrustagi11@gmail.com" method="POST">
+                <p>
+                    <input type="text" name="name" maxlength="40" placeholder="Name" required>
+                </p>
+                <p>
+                    <input type="email" name="email" maxlength="40" placeholder="Email" required>
+                </p>
+                <p>
+                    <input type="tel" name="phone" minlength="10" maxlength="10" placeholder="Phone" required>
+                </p>
+                <p>
+                    <textarea name="message" rows="5" cols="40" placeholder="Enter Message" required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
         </div>
     </main>
 

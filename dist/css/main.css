@@ -183,7 +183,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3' 'skill skill skillextra';
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3' 'skill skill skill3';
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -195,8 +195,8 @@ main {
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job {
-    background: #0d0d0d;
-    padding: 0.5rem;
+    background: #121212;
+    padding: 0.5rem 1rem;
     border-bottom: #1a87ee 5px solid; }
   .about-info .skills {
     grid-area: skill; }
@@ -261,23 +261,32 @@ main {
       border-color: #1a87ee;
       transition: all 0.5s ease-out; }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 1.5rem;
-    border: 3px #1a87ee solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #1a87ee; }
-      .boxes div:hover span {
-        color: #000; }
+.contact-form {
+  width: 40%; }
+  .contact-form input,
+  .contact-form textarea {
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    width: 100%; }
+  .contact-form input {
+    padding: 5px 5px 5px 10px;
+    height: 50px; }
+  .contact-form textarea {
+    padding: 10px 5px 0 10px; }
+  .contact-form input[type=submit] {
+    background-color: transparent;
+    border: 3px solid #1a87ee;
+    color: #fff;
+    padding: 12px 5px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .contact-form input[type=submit]:hover {
+      background-color: #1a87ee;
+      color: #000;
+      font-weight: 600; }
 
 /* BUTTON STYLES */
 .btn, .btn-dark, .btn-light {
@@ -307,12 +316,16 @@ main {
 /* WIDE SCREENS */
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .contact-form {
+    width: 40%; } }
 
 /* DESKTOPS AND LAPTOPS */
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .contact-form {
+    width: 60%; } }
 
 /* TABLETS */
 @media screen and (max-width: 768px) {
@@ -343,10 +356,15 @@ main {
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'skill';
     grid-template-columns: 1fr; }
+    .about-info .bar {
+      text-align: initial;
+      margin-bottom: 1rem !important; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .contact-form {
+    width: 100%; } }
 
 /* SMARTPHONES */
 @media screen and (max-width: 500px) {
@@ -359,5 +377,5 @@ main {
       font-size: 4rem; }
   .projects {
     grid-template-columns: 1fr; }
-  .boxes div {
-    font-size: 1rem; } }
+  .contact-form {
+    width: 100%; } }
