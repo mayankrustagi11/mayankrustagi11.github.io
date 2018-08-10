@@ -22,7 +22,7 @@ h3 {
     margin: 0;
     font-weight: 400;
     &.lg-heading {
-        font-size: 6rem;
+        font-size: 4rem;
     }
     &.sm-heading {
         margin-bottom: 2rem;
@@ -32,7 +32,7 @@ h3 {
 }
 
 a {
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -54,8 +54,22 @@ main {
         a {
             padding: 0.4rem;
             &:hover {
-                color: $secondary-color;
                 @include easeOut();
+            }
+            &#linkedin:hover {
+                color: #00a9cd;
+            }
+            &#github:hover {
+                color: #6e5494;
+            }
+            &#twitter:hover {
+                color: #6dc5dd;
+            }
+            &#facebook:hover {
+                color: #3b5998;
+            }
+            &#instagram:hover {
+                color: #6dc993;
             }
         }
     }
@@ -70,7 +84,7 @@ main {
 .about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3' 'skill skill skillextra';
     grid-template-columns: repeat(3, 1fr);
     .bio-image {
         grid-area: bioimage;
@@ -84,16 +98,74 @@ main {
     .job-1 {
         grid-area: job1;
     }
-    .job-2 {
-        grid-area: job2;
-    }
-    .job-2 {
-        grid-area: job3;
-    }
     .job {
         background: lighten($primary-color, 5);
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
+    }
+    .skills {
+        grid-area: skill;
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        @keyframes load {
+            from {
+                width: 0%
+            }
+        }
+        @-webkit-keyframes load {
+            from {
+                width: 0%
+            }
+        }
+        @-moz-keyframes load {
+            from {
+                width: 0%
+            }
+        }
+        .bar {
+            background-color: set-text-color($primary-color);
+            padding: 0.15rem;
+            border-radius: 1rem;
+            margin-bottom: 0.4rem;
+            font-size: 14px;
+            color: set-text-color($primary-color);
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba($primary-color, 0.5);
+            cursor: pointer;
+            &:before {
+                content: attr(data-skill);
+                display: inline-block;
+                padding: 2px 0px 2px 10px;
+                border-radius: inherit;
+                animation: load 2s 0s;
+                -webkit-animation: load 2s 0s;
+                -moz-animation: load 2s 0s;
+                @include easeOut;
+            }
+            &:nth-child(2n):before {
+                background: #F4D03F;
+            }
+            &:nth-child(2n+1):before {
+                background: #34495E;
+            }
+            &.beginner:before {
+                width: calc(40% - 10px);
+            }
+            &.intermediate:before {
+                width: calc(60% - 10px);
+            }
+            &.basic:before {
+                width: calc(75% - 10px);
+            }
+            &.advance:before {
+                width: calc(85% - 10px);
+            }
+            &.expert:before {
+                width: calc(95% - 10px);
+            }
+        }
     }
 }
 
@@ -120,7 +192,7 @@ main {
     margin-top: 1rem;
     div {
         font-size: 1.5rem;
-        border: 3px #fff solid;
+        border: 3px $secondary-color solid;
         padding: 1.5rem 2.5rem;
         margin-bottom: 3rem;
         @include easeOut;
