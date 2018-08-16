@@ -84,7 +84,7 @@ main {
 .about-info {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3' 'skill skill skill3';
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
     grid-template-columns: repeat(3, 1fr);
     .bio-image {
         grid-area: bioimage;
@@ -103,12 +103,23 @@ main {
         padding: 0.5rem 1rem;
         border-bottom: $secondary-color 5px solid;
     }
+}
+
+.heading-center {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-display {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'skill1 skill skill skill skill3';
+    grid-template-columns: repeat(5, 1fr);
     .skills {
         grid-area: skill;
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+        margin-bottom: 2rem;
         @keyframes load {
             from {
                 width: 0%
@@ -166,6 +177,17 @@ main {
                 width: calc(95% - 10px);
             }
         }
+    }
+}
+
+.timeline-display {
+    .timeline-heading {
+        font-size: 1.4rem;
+    }
+    .timeline-text {
+        font-size: 1.15rem;
+        font-weight: 300;
+        text-align: justify;
     }
 }
 
