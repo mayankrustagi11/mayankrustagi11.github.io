@@ -1,3 +1,32 @@
+document.addEventListener('contextmenu', e => {
+    e.preventDefault();
+});
+
+var projects = document.querySelectorAll(".project-toggle");
+projects.forEach(btn =>
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        let projectId = btn.getAttribute('id');
+        let modal = document.getElementById('modal' + projectId);
+        modal.style.display = "block";
+        modal.classList.add('active');
+    })
+);
+
+$('.close').on('click', () => {
+    let modal = document.querySelector('.modal.active');
+    modal.style.display = "none";
+    modal.classList.remove('active');
+});
+
+$(window).on('click', (e) => {
+    let modal = document.querySelector('.modal.active');
+    if (e.target == modal) {
+        modal.style.display = "none";
+        modal.classList.remove('active');
+    }
+});
+
 const menu = document.querySelector('.menu');
 const menuBtn = document.querySelector('.menu-btn');
 const menuNav = document.querySelector('.menu-nav');

@@ -70,6 +70,13 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+    .modal-content {
+        width: 80% !important;
+        margin: 10% auto !important;
+        img {
+            height: 200px !important;
+        }
+    }
     .contact-form {
         width: 100%;
     }
@@ -96,6 +103,11 @@
     }
     .projects {
         grid-template-columns: 1fr;
+    }
+    .modal-content {
+        img {
+            height: 150px !important;
+        }
     }
     .contact-form {
         width: 100%;
