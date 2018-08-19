@@ -68,7 +68,8 @@
       height: 250px;
       background: url(../img/Mayank.jpg);
       border-radius: 50%;
-      border: solid 3px #1a87ee; }
+      border: solid 3px #1a87ee;
+      pointer-events: none; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -135,6 +136,19 @@ body {
       background: rgba(0, 0, 0, 0.8);
       z-index: -1; }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: #fff; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a87ee; }
+
 /* Headings */
 h1,
 h2,
@@ -197,7 +211,8 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #1a87ee 3px solid; }
+    border: #1a87ee 3px solid;
+    pointer-events: none; }
   .about-info .bio {
     grid-area: bio;
     font-size: 20px;
@@ -256,7 +271,7 @@ main {
         -moz-animation: load 2s 0s;
         transition: all 0.5s ease-out; }
       .skills-display .skills .bar:nth-child(2n):before {
-        background: #F4D03F; }
+        background: #117A65; }
       .skills-display .skills .bar:nth-child(2n+1):before {
         background: #34495E; }
       .skills-display .skills .bar.beginner:before {
@@ -470,6 +485,7 @@ main {
     font-size: 24px; }
     div.menu-branding .portrait {
       background: url(../img/Mayank_small.jpg);
+      pointer-events: none;
       width: 150px;
       height: 150px; }
   ul.menu-nav {

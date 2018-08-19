@@ -46,6 +46,7 @@
         font-size: 24px;
         .portrait {
             background: url(../img/Mayank_small.jpg);
+            pointer-events: none;
             width: 150px;
             height: 150px;
         }

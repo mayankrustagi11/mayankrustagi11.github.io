@@ -82,6 +82,7 @@
             background: url(../img/Mayank.jpg);
             border-radius: 50%;
             border: solid 3px $secondary-color;
+            pointer-events: none;
         }
     }
     .nav-item {

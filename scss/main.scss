@@ -22,6 +22,24 @@ body {
     user-select: none;
 }
 
+/* SCROLL BAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: set-text-color($primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $secondary-color;
+}
+
 /* Headings */
 
 h1,
@@ -99,6 +117,7 @@ main {
         margin: auto;
         border-radius: 50%;
         border: $secondary-color 3px solid;
+        pointer-events: none;
     }
     .bio {
         grid-area: bio;
@@ -167,7 +186,7 @@ main {
                 @include easeOut;
             }
             &:nth-child(2n):before {
-                background: #F4D03F;
+                background: #117A65;
             }
             &:nth-child(2n+1):before {
                 background: #34495E;
